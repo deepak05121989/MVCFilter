@@ -56,6 +56,10 @@ namespace MVCFilter.Controllers
                             Session["user"] = userDetails.UserName;
                             return RedirectToAction("Index");
                         }
+                        else
+                        {
+                            ViewBag.Message = "Invalid User Id and Password";
+                        }
 
                     }
                 }
